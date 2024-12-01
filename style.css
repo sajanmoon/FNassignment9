@@ -4,8 +4,13 @@
   box-sizing: border-box;
   font-family: "Inter Tight", sans-serif;
 }
+
 /* NAVBAR*************************************************************** */
 .navbar {
+  position: fixed;
+  top: 0; /* Aligns it to the top of the viewport */
+  left: 0; /* Aligns it to the left */
+  width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -48,16 +53,17 @@
 .header {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   color: white;
   background-color: #3755be;
   font-size: 20px;
-  height: 85vh;
+  height: 90vh;
 }
 .headerContent {
-  padding: 90px 100px;
+  padding: 180px 100px;
   max-width: 55%;
   text-align: center;
 }
@@ -518,6 +524,7 @@
   /* border: 1px solid black; */
   width: 50%;
   margin: 0 auto;
+  padding: 40px 0;
 }
 .FAQcontent h1 {
   font-size: 30px;
@@ -544,52 +551,165 @@
   color: gray;
 }
 
+/* FOOTER ****************************************** */
+.footer {
+  background-color: #1b1f3b;
+}
+.footercontent {
+  /* border: 1px solid white; */
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.footercontent h1 {
+  color: white;
+  font-size: 30px;
+}
+.footercontent .blueBox {
+  background-color: #3755be;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+  padding: 40px 20px;
+}
+.footercontent .blueBox button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #3755be;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+}
+.footercontent .information {
+  /* border: 1px solid white; */
+  margin: 30px 0;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footercontent .information .navigate h2 {
+  padding-bottom: 20px;
+}
+.footercontent .information .navigate ul li {
+  color: gray;
+  font-weight: bold;
+  padding: 8px 0;
+  list-style: none;
+}
+.footercontent .information .contact {
+  /* border: 1px solid white; */
+  margin-right: 70px;
+}
+.footercontent .information .contact h2 {
+  padding-bottom: 20px;
+}
+.footercontent .information .contact .icon {
+  padding: 20px 20px 20px 0;
+}
+.footercontent .information .contact .first {
+  display: flex;
+  align-items: center;
+}
+.footercontent .information .contact .first .text p {
+  width: 80%;
+}
+.footercontent .information .subcribe {
+  /* border: 1px solid white; */
+  width: 30%;
+}
+.footercontent .subFooter {
+  /* border: 1px solid white; */
+  color: white;
+  margin: 30px 0;
+}
+.footercontent .information .subcribe h2 {
+  padding-bottom: 20px;
+}
+.footercontent .information .subcribe input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+.footercontent .information .subcribe button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: #3755be;
+}
+.footercontent .information .subcribe h5 {
+  font-size: 12px;
+}
+.footercontent .subFooter {
+  /* border: 1px solid white; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin: 0 auto;
+}
+.footercontent .subFooter .icons {
+  color: gray;
+  text-align: center;
+}
+.footercontent .subFooter .icons svg {
+  margin: 10px 20px;
+}
+.footercontent .subFooter .icons p {
+  color: rgb(222, 219, 219);
+  font-size: 14px;
+  margin: 20px 0;
+}
 @media (max-width: 430px) {
-  /* NAVBAR ************************************************************ */
+  /* NAVBAR *************************************************************** */
   .navbar {
-    font-size: 16px;
-    height: 60px;
+    font-size: 16px; /* Adjust font size */
+    height: 60px; /* Reduce navbar height */
+    width: 100%; /* Full width */
+    margin: 0; /* Remove margins */
   }
   .navContent {
-    flex-direction: column;
-    max-width: 90%;
+    flex-direction: column; /* Stack content vertically */
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for spacing */
   }
   .navContent h3 {
-    font-size: 20px;
+    font-size: 20px; /* Adjust title size */
     margin-bottom: 10px;
   }
-  .navContent ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .navContent ul li {
-    font-size: 15px;
-  }
+  .navContent ul,
   .navContent button {
-    padding: 6px 10px;
-    font-size: 15px;
+    display: none; /* Hide menu items and button */
   }
 
-  /* HEADER ************************************************************ */
+  /* HEADER *************************************************************** */
   .header {
-    height: auto;
-    padding: 20px 15px;
+    height: auto; /* Flexible height */
+    padding: 20px;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove default margins */
   }
   .headerContent {
-    padding: 50px 20px;
-    max-width: 90%;
+    padding: 50px 10px; /* Reduce padding */
+    max-width: 100%; /* Override max-width for full screen */
   }
   .header h1 {
-    font-size: 40px;
+    font-size: 36px; /* Adjust font size */
     line-height: 1.2;
   }
   .headerContent p {
     font-size: 14px;
-    padding: 10px 0;
+    width: 100%; /* Full width for paragraph */
+    margin: 0 auto; /* Center the text */
   }
   .headerContent .buttons button {
-    padding: 12px 25px;
+    padding: 12px 20px;
     font-size: 14px;
-    margin: 10px 5px;
+    margin: 10px 0; /* Space between buttons */
+    width: 100%; /* Full-width buttons */
   }
 }
+
+

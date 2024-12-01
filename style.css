@@ -128,6 +128,7 @@
   width: 80%;
   padding: 20px 0;
   line-height: 1.5;
+  color: gray;
 }
 
 .LandingPageCardContent .cards .right ul li {
@@ -163,6 +164,7 @@
   font-size: 22px;
   width: 45%;
   padding: 20px 0;
+  color: gray;
 }
 .moreLandingPageContext .images img {
   height: auto;
@@ -204,6 +206,7 @@
   width: 80%;
   padding: 10px 0;
   line-height: 1.5;
+  color: gray;
 }
 .SVGDecorationContext .right h3 {
   font-size: 22px;
@@ -237,6 +240,7 @@
   width: 75%;
   line-height: 1.5;
   padding: 25px 0;
+  color: gray;
 }
 .left ul {
   padding: 20px 30px;
@@ -662,54 +666,180 @@
   font-size: 14px;
   margin: 20px 0;
 }
-@media (max-width: 430px) {
+@media (max-width: 381px) {
   /* NAVBAR *************************************************************** */
   .navbar {
-    font-size: 16px; /* Adjust font size */
-    height: 60px; /* Reduce navbar height */
-    width: 100%; /* Full width */
-    margin: 0; /* Remove margins */
+    width: 100vw;
   }
   .navContent {
-    flex-direction: column; /* Stack content vertically */
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding for spacing */
+    max-width: 100%;
   }
-  .navContent h3 {
-    font-size: 20px; /* Adjust title size */
-    margin-bottom: 10px;
+  .navContent .logo {
+    margin: 20px;
   }
-  .navContent ul,
-  .navContent button {
-    display: none; /* Hide menu items and button */
+  .navContent ul {
+    display: none;
   }
-
   /* HEADER *************************************************************** */
   .header {
     height: auto; /* Flexible height */
     padding: 20px;
-    width: 100%; /* Full width */
-    margin: 0; /* Remove default margins */
+    width: 100%;
+    /* margin: 0 auto; */
+    box-sizing: border-box;
+    max-width: 100%;
   }
   .headerContent {
-    padding: 50px 10px; /* Reduce padding */
-    max-width: 100%; /* Override max-width for full screen */
+    padding: 100px 10px;
+    max-width: 100%;
+
+    box-sizing: border-box; /* Avoid any overflow due to padding */
   }
   .header h1 {
-    font-size: 36px; /* Adjust font size */
+    font-size: 40px; /* Adjust font size */
     line-height: 1.2;
+    /* max-width: 99%; */
   }
   .headerContent p {
-    font-size: 14px;
+    font-size: 18px;
     width: 100%; /* Full width for paragraph */
     margin: 0 auto; /* Center the text */
   }
-  .headerContent .buttons button {
-    padding: 12px 20px;
+  .headerContent .buttons {
+    display: flex;
+    /* padding: 5px 20px; */
+    /* font-size: 14px; */
+    /* margin: 10px 0;  */
+    /* width: 100%;  */
+  }
+  /* LandingPageCard ****************************************** */
+  .LandingPageCardContent {
+    padding: 1px;
+  }
+  .LandingPageCardContent h1 {
+    font-size: 30px;
+    max-width: 99%;
+    text-align: center;
+    /* padding: 10px 0; */
+  }
+  .LandingPageCardContent .cards {
+    display: flex;
+    flex-direction: column;
+    max-width: 95%;
+  }
+  .LandingPageCardContent .cards img {
+    height: auto;
+    width: 380px;
+    margin: 0 auto;
+    padding-right: 0;
+    border-radius: 10px;
+    padding-left: 0;
+  }
+  .LandingPageCardContent .cards .right p {
+    font-size: 20px;
+    width: 99%;
+    padding: 20px 0;
+    line-height: 1.5;
+  }
+  /* MORELANDINGPAGES************************************************** */
+  .moreLandingPageContext h1 {
+    font-size: 35px;
+    width: 90%;
+  }
+  .moreLandingPageContext p {
+    font-size: 20px;
+    width: 95%;
+    padding: 20px 0;
+  }
+  /* SVGDecoration******************************************* */
+  .SVGDecorationContext {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* text-align: center; */
+    /* border: 1px solid black; */
+    max-width: 99%;
+    margin: 0 auto;
+    gap: 0;
+  }
+  .SVGDecorationContext .left img {
+    height: auto;
+    width: 350px;
+  }
+  .SVGDecorationContext .right {
+    padding-left: 10px;
+  }
+  .SVGDecorationContext .right h1 {
+    font-size: 35px;
+  }
+  .SVGDecorationContext .right p {
+    font-size: 18px;
+    width: 90%;
+    padding: 10px 0;
+    line-height: 1.5;
+  }
+  .SVGDecorationContext .right h3 {
+    font-size: 18px;
+  }
+  /* COLORSCHEME ************************************ */
+  .COLORSCHEME {
+    /* border: 1px solid black; */
+    max-width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 100px 1px;
+    /* padding-top: 80px; */
+  }
+  .left {
+    /* border: 1px solid black; */
+    padding: 0;
+  }
+  .left h1 {
+    font-size: 35px;
+    width: 99%;
+  }
+  .left p {
+    font-size: 18px;
+    width: 90%;
+  }
+  .right {
+    /* border: 1px solid black; */
+    padding: 1px;
+  }
+  .right .box {
+    /* border: 1px solid gray; */
+    height: 80px;
+    width: 320px;
+    margin: 15px;
+  }
+  /* LESSWORK ********************************************************** */
+  .lessWorkContent {
+    /* border: 1px solid black; */
+    width: 94%;
+    margin: 100px auto;
+  }
+  .lessWorkContent h1 {
+    font-size: 35px;
+    text-align: center;
+    margin: 20px 0;
+  } 
+  .lessWorkContent .para {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .lessWorkContent .blackBox {
+    width: 340px;
+  }
+  .lessWorkContent .whiteBox {
+    width: 340px;
+  }
+
+  .lessWorkContent .whiteBox p {
     font-size: 14px;
-    margin: 10px 0; /* Space between buttons */
-    width: 100%; /* Full-width buttons */
   }
 }
-
-
